@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<h1>Completed Pomodoros <%= @pomodoros.length%></h2>
+
+	<% @pomodoros.each do |t| %>
+		<div>
+			<h2>User: <%= t.user %><h2>
+			<h4>Task: <%= t.task %><h4>
+			<h4>Comments:<%= t.comments %><h4>	
+			<h4>Created At:<%= t.created_at %><h4>
+			<br>
+		</div>
+	<% end %>
