@@ -11,7 +11,7 @@ def index
 end
 
 def create
-  @pomodoro = Pomodoro.new
+  @pomodoro = Pomodoro.new()
   #@pomodoro.user = params[:pomodoro][:user]
   #@pomodoro.task = params[:pomodoro][:task]
   
