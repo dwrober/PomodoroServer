@@ -12,17 +12,17 @@ end
 
 def create
   @pomodoro = Pomodoro.new
-  @pomodoro.user = params[:pomodoro][:user]
-  @pomodoro.task = params[:pomodoro][:task]
+  #@pomodoro.user = params[:pomodoro][:user]
+  #@pomodoro.task = params[:pomodoro][:task]
   
   puts "------------------------------->"
-    puts params[:pomodoro]
+    puts params
     puts @pomodoro.user
     puts @pomodoro.task
   puts "------------------------------->"
   
   respond_to do |format|
-    if @pomodoro.save
+    if true #@pomodoro.save
       format.json { render :json => @pomodoro }
     else
       format.json { render json: @pomodoro.errors, status: :unprocessable_entity }
