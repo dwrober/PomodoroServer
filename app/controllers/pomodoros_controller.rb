@@ -15,6 +15,12 @@ def create
   @pomodoro.user = params[:pomodoro][:user]
   @pomodoro.task = params[:pomodoro][:task]
   
+  puts "------------------------------->"
+    puts params[:pomodoro]
+    puts @pomodoro.user
+    puts @pomodoro.task
+  puts "------------------------------->"
+  
   respond_to do |format|
     if @pomodoro.save
       format.json { render :json => @pomodoro }
